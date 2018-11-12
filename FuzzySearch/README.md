@@ -88,7 +88,7 @@ You should see the  html page with text box where you can enter the word to sear
 
 #### Images
 
-`http://0.0.0.0:5000/` - Shows index.html
+'http://0.0.0.0:5000/' - Shows index.html
 <img src="images/index.png">
 
 'http://0.0.0.0:5000/search?word=pract' -Shows result for user search
