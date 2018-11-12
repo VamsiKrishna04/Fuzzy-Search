@@ -1,12 +1,15 @@
 # Project : Fuzzy Search
 
 ## What it is and does
-This webpage takes a word as input from user and results the json array with 25 words related to the word entered.
+This a HTTP service that provides an endpoint for fuzzy search / autocomplete of English words.
+In this web app the user types in a single word from [this list](https://drive.google.com/file/d/1dZdWIkjP6MNWFt-Umq8BfUU4AplpmRHX/view) in a search box. It auto-complete the input in the search box.
+The response is a JSON array containing upto 25 results, ranked by some criteria.
 
 ### Table of Contents
  
 * [Required Libraries and Dependencies](#required-libraries-and-dependencies)
 * [Project contents](#project-contents)
+* [Demo](#demo)
 * [Templates](#templates)
 * [How to Run the Project](#how-to-run-the-project)
 * [Website Images](#images)
@@ -26,11 +29,14 @@ system.
 ## Project contents
 This project consists for the following files in the `FuzzySearch` directory:
 * `app.py` -  The main Python script that serves the website.
-* `corpus.db` - Sqlite Database from which we query the result.
+* `corpus.db` - Sqlite Database with [dataset](https://drive.google.com/file/d/1dZdWIkjP6MNWFt-Umq8BfUU4AplpmRHX/view).
 * `README.md` - This read me file.
 
 * `/templates` -Contains the template index.html .
-        
+
+## Demo
+Click this link to view the website: https://fuzzysearch.pythonanywhere.com/
+
 ### Templates
 The `/templates` directory contains the following file, written in HTML
 
@@ -65,7 +71,7 @@ More detailed instructions for installing the Vagrant VM can be found
 [here](https://www.udacity.com/wiki/ud197/install-vagrant).
 
 ### Make sure you're in the right place
-Once inside the VM, navigate to the t directory properties_dekho with this command:
+Once inside the VM, navigate to the  directory FuzzySearch with this command:
 
 ```bash
 cd /vagrant/FuzzySearch
