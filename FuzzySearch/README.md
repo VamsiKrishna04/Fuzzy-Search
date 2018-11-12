@@ -9,7 +9,7 @@ This webpage takes a word as input from user and results the json array with 25 
 * [Project contents](#project-contents)
 * [Templates](#templates)
 * [How to Run the Project](#how-to-run-the-project)
-* [Website Images](#crud-for-projects)
+* [Website Images](#images)
 
 ## Required Libraries and Dependencies
 * Python 2.7.x
@@ -86,9 +86,7 @@ http://localhost:5000/
 You should see the  html page with text box where you can enter the word to search.
 
 
-#### --------------------------------------
 #### Images
-#### --------------------------------------
 
 `http://0.0.0.0:5000/` - Shows index.html
 <img src="images/index.png">
