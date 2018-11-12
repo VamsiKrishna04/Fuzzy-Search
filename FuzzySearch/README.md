@@ -26,7 +26,7 @@ system.
 ## Project contents
 This project consists for the following files in the `FuzzySearch` directory:
 * `app.py` -  The main Python script that serves the website.
-*`corpus.db`. Sqlite Database from which we query the result.
+* `corpus.db` - Sqlite Database from which we query the result.
 * `README.md` - This read me file.
 
 * `/templates` -Contains the template index.html .
