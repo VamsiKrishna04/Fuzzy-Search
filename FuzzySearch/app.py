@@ -78,11 +78,11 @@ def search_word():
         like_word = '%'+word+'%'
         start_with = word+'%'
         # Create View that stores words having user input
-        sql_cmd = "create view DescWords as select * from corpus where word like '{}' order by length(word) desc".format(like_word)
+        sql_cmd = "CREATE TEMP VIEW IF NOT EXISTS DescWords AS select * from corpus where word like '{}' order by length(word) desc".format(like_word)
         cursor = conn.execute(sql_cmd)
 
         # Create View that stores words that short and start with user input
-        sql_cmd = "create view ShortBegDsc as select * from corpus where word like '{}' order by length(word) desc".format(start_with)
+        sql_cmd = "CREATE TEMP VIEW IF NOT EXISTS ShortBegDsc AS select * from corpus where word like '{}' order by length(word) desc".format(start_with)
         cursor = conn.execute(sql_cmd)
 
         # Create View that stores words not present in view ShortBegDsc
@@ -134,14 +134,8 @@ def search_word():
                         else:
                             sbs_counter = sbs_counter + 1
                             match['sbs'] = sbs_counter
-                            prevStrLen = curStrLen
-
-        # Drop views
-        sql_cmd = "DROP VIEW DescWords;"
-        cursor = conn.execute(sql_cmd)
-
-        sql_cmd = "DROP VIEW ShortBegDsc;"
-        cursor = conn.execute(sql_cmd)
+                            prevStrLen = curStrLen        
+        
         # Close the connection
         conn.close()
 
